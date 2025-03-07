@@ -7,7 +7,7 @@ let initialPromise = new Promise((resolve,reject) => {
 
 initialPromise.then((number) => {
 	let evenNumber = number.filter((num) => num%2 == 0);
-	document.querySelector("#input").textContent = evenNumber;
+	document.querySelector("#output").textContent = evenNumber;
 	return new Promise((resolve,reject) => {
        setTimeout(() => {
 		   resolve(evenNumber);
@@ -16,7 +16,7 @@ initialPromise.then((number) => {
 })
 .then((evenNumber) => {
 	let multiplyBy = evenNumber.map((num) => num*2);
-	document.querySelector("#input").textContent = multiplyBy;
+	document.querySelector("#output").textContent = multiplyBy;
 	return new Promise ((resolve,reject) => {
 		setTimeout(() => {
 			resolve(multiplyBy);
